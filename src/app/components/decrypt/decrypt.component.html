@@ -1,0 +1,25 @@
+<div class="card">
+  <h5 class="card-header">Desencriptar</h5>
+  <div class="card-body">
+    <div class="form-group">
+      <label for="text">Texto encriptado</label>
+      <input type="text" class="form-control" id="text" placeholder="Ingresa texto a desencriptar" [(ngModel)]="value">
+    </div>
+    <div class="form-group">
+      <label for="key">Clave</label>
+      <textarea class="form-control" id="key" rows="3" placeholder="Ingrese la clave para desencriptar"
+                [(ngModel)]="key"></textarea>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="textEncrypt">Texto desencriptado</label>
+      <textarea class="form-control" id="textEncrypt" readonly rows="3">{{textDecrypt}}</textarea>
+    </div>
+  </div>
+  <div class="card-footer text-muted">
+    <div class="row-cols-4">
+      <button type="button" class="btn btn-success" (click)="run()">Realizar</button>
+      <button type="button" class="btn btn-warning" (click)="clear()">Limpiar</button>
+    </div>
+  </div>
+</div>
